@@ -1,0 +1,299 @@
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* Limit Overall overall page width */
+:root {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #f2f2f2; /* Fills the page */
+  position: relative; /* Fix for absolute positioning */
+}
+
+body {
+  font-family: 'Source+Sans+Pro', sans-serif;
+  color: #384047;
+  font-size: 1em;
+  background-color: rgb(224, 224, 224);
+  /* --  Changes below  -- */
+  background: linear-gradient(#e0e0e0, transparent 90%),
+              linear-gradient(0deg, #838889, transparent 90%), #838889;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.25em;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-size: .875em;
+  font-weight: 400;
+  color: #8a97a0;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 0;
+}
+
+form {
+  max-width: 290px;
+  margin: 15px auto;
+  margin-top: 30px;
+  margin-bottom: 60px;/* -- Change -- */
+  border-top: 5px solid #000;
+}
+
+fieldset {
+  margin: 0 0 30px 0;
+  padding: 0;
+  border: none;
+}
+
+legend {
+  font-weight: 700;
+  font-size: 1.25em;
+  padding-top: 30px;
+  margin-bottom: 25px;
+}
+
+label {
+  display: block;
+  font-size: .75em;
+  margin-bottom: 10px;
+}
+
+input[placeholder*="Required"] {
+  text-align: right;
+  font-style: italic;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="tel"],
+input[type="url"],
+textarea,
+select {
+  border: none;
+  font-size: 1em;
+  height: 50px;
+  border-radius: 5px;
+  margin: 0;
+  outline: 0;
+  width: 100%;
+  color: #8a97a0;
+  background-color: #fff;
+  margin-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin: 0 5px 15px 0;
+}
+
+textarea {
+  height: 100px;
+  padding-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+button {
+  padding: 19px 39px 18px 39px;
+  color: #FFF;
+  background-color: #f79331;
+  font-size: 18px;
+  text-align: center;
+  font-style: normal;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+footer {
+/*  color: #8a97a0;*/
+  color: #fff;
+  text-align: center;
+  font-style: italic;
+  letter-spacing: 0.1em;
+  padding-top:70px;
+  height: 200px;
+  background: url('../img/img_0466_50.jpg') no-repeat center;
+}
+
+fieldset > h3 {
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 15px;
+}
+
+fieldset > label:last-of-type {
+  margin-top: 25px;
+}
+
+label[for^="News"] {
+  margin-bottom: 15px;
+}
+
+
+
+/*------ CSS States ----*/
+
+input:focus,
+input:hover,
+textarea:focus,
+textarea:hover,
+select:focus,
+textarea:hover {
+  text-align: left;
+  background-color: #f5f4b1;
+  border: 1px solid #f79331;
+  transition: background-color 0.3s ease 0.25s;
+}
+
+input:valid {
+  text-align: left;
+  font-style: normal;
+}
+
+
+
+/* --- Classes ----*/
+
+.masthead {
+  margin-top: 0;
+  padding: 20px;
+  background: #292c3d;
+  color: white;
+  font-size: 1em;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.banner {
+  padding-bottom: 15px;
+}
+
+.inline_label {
+  display: inline;
+}
+
+.zipcode input[type="text"] {
+  width: 150px;
+}
+
+
+
+/* --- DRY Rules ----*/
+
+.txt_center {
+  text-align: center;
+}
+
+.brdr_top {
+  margin-top: 4px;
+  display: block;
+  border-top: 2px solid #292c3d;
+}
+
+
+
+/* ---------- Break Point -----------*/
+
+@media screen and (min-width: 760px) {
+
+  form {
+    max-width: 600px;
+  }
+
+  .ci_row_container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  .ci_row_container > label {
+    margin-bottom: 0;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="number"],
+  input[type="tel"],
+  input[type="url"],
+  select {
+    width: 445px;
+    margin-bottom: 0;
+  }
+
+
+  .zipcode {
+    justify-content: flex-start;
+  }
+
+  .zipcode label {
+    padding-right: 107px;
+  }
+
+}
+
+
+
+@media screen and (min-width: 1024px) {
+
+  form {
+    max-width: 800px;
+  }
+
+  .ci_row_container > label {
+    margin-left: 80px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="number"],
+  input[type="tel"],
+  input[type="url"],
+  select {
+    width: 445px;
+    margin-right: 80px;
+  }
+
+  .zipcode {
+    justify-content: flex-start;
+  }
+
+  .zipcode label {
+    padding-right: 147px;
+  }
+
+  fieldset:nth-of-type(2) {
+    margin-left: 80px;
+  }
+
+  fieldset:nth-of-type(2) legend {
+    margin-left: -80px;
+  }
+
+  textarea {
+    width: 640px;
+  }
+  button {
+    width: 640px;
+    margin-left: 80px;
+  }
+
+}
